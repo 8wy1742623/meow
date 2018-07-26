@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style type="text/css">
+        .p{
+            height: 300px;
+            border: solid grey 1px
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.min.css">
+
+
+</head>
+
+<body>
+
+<div id="father" style="height:100px; overflow:hidden">//这两个属性是必须加上的
+
+<div id="son1">
+
+我是第一行<br>
+
+我是第二行<br>
+
+我是第三行<br>
+
+我是第四行<br>
+
+。。。。。<br>
+
+我是第N行<br>
+
+</div>
+
+<div id="son2"></div>
+
+</div>
+
+<div class="p"><p>段落1</p></div>
+    <div class="p"><p>段落2</p></div>
+    <div class="p"><p>段落3</p></div>
+    <div class="p"><p>段落4</p></div>
+    <div class="p"><p>段落5</p></div>
+    <div class="p"><p>段落6</p></div>
+    <div class="p"><p>段落7</p></div>
+    <div class="p"><p>段落8</p></div>
+    <div class="p"><p>段落9</p></div>
+    <div class="p"><p>段落10</p></div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+function rt() {
+    var d = document,
+        dd = document.documentElement,
+        db = document.body,
+        top = dd.scrollTop || db.scrollTop,
+        step = Math.floor(top / 20);
+       (function() {
+           top -= step;
+           if (top > -step) {
+               dd.scrollTop == 0 ? db.scrollTop = top: dd.scrollTop = top;
+               setTimeout(arguments.callee, 20);
+           }
+       })();
+}
+rt();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js"></script>
